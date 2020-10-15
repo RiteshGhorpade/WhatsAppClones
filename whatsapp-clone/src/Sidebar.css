@@ -1,0 +1,41 @@
+.sidebar {
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_header {
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid rgb(39, 35, 35);
+  padding: 20px;
+}
+.sidebar_headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10vw;
+}
+.sidebar__search {
+  display: flex;
+  align-items: center;
+  background-color: #dadadace;
+  height: 39px;
+  padding: 10px;
+}
+.sidebar__searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+}
+.sidebar__searchContainer .MuiSvgIcon-root {
+  color: gray;
+  padding: 10px;
+}
+.sidebar__searchContainer input {
+  border: none;
+  margin-left: 10px;
+  width: 80%;
+}

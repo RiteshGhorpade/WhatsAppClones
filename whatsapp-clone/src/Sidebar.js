@@ -1,12 +1,45 @@
-import React from 'react'
-import './Sidebar.css'
-
+import React from "react";
+import "./Sidebar.css";
+import { Avatar, IconButton } from "@material-ui/core";
+import DonutLargeIcon from "@material-ui/icons/DonutLarge";
+import ChatIcon from "@material-ui/icons/Chat";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import SearchOutlined from "@material-ui/icons/SearchOutlined";
 function Sidebar() {
-    return (
-        <div className="sidebar">
-            <h1>Hi I am a Sidebar</h1>
+  return (
+    <div className="sidebar">
+      <div className="sidebar_header">
+        <IconButton>
+          <Avatar />
+        </IconButton>
+        <div className="sidebar_headerRight">
+          <IconButton>
+            <DonutLargeIcon />
+          </IconButton>
+          <IconButton>
+            <ChatIcon />
+          </IconButton>
+          <IconButton>
+            <MoreVertIcon />
+          </IconButton>
         </div>
-    )
+      </div>
+      <div className="sidebar_search">
+        <div className="sidebar__searchContainer">
+          <SearchOutlined />
+          <input placeholder="Search or Start a new chat" />
+        </div>
+      </div>
+      <div className="sidebar_chats">
+        <h1>SidebarChats</h1>
+        <h1>SidebarChats</h1>
+        <h1>SidebarChats</h1>
+        <h1>SidebarChats</h1>
+        <h1>SidebarChats</h1>
+        <h1>SidebarChats</h1>
+      </div>
+    </div>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
