@@ -1,0 +1,23 @@
+.sidebarchat {
+  display: flex;
+  padding: 15px;
+  border: 1px solid pink;
+
+  background-color: antiquewhite;
+  align-items: center;
+}
+.sidebarchat > h3 {
+  margin: 0px 40px;
+  padding: 0px 10px;
+}
+.sidebarchat:hover {
+  background-color: pink;
+}
+.sidebarChat_info > h4 {
+  margin: 0px;
+  padding: 0px 10px;
+}
+.sidebarChat_info > p {
+  margin: 0px;
+  padding: 0px 10px;
+}

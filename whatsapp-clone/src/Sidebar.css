@@ -6,7 +6,7 @@
 .sidebar_header {
   display: flex;
   justify-content: space-between;
-  border-right: 1px solid rgb(39, 35, 35);
+  border-right: 1px solid pink;
   padding: 20px;
 }
 .sidebar_headerRight {
@@ -38,4 +38,8 @@
   border: none;
   margin-left: 10px;
   width: 80%;
+}
+.sidebar_chats {
+  flex: 1;
+  background-color: wheat;
 }
