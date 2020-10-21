@@ -1,12 +1,10 @@
 import { Avatar } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import db from "./firebase";
 import "./SidebarChat.css";
 
 function SidebarChat(props) {
-  const { roomID } = useParams();
-
   const [seed, setSeed] = useState("");
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
