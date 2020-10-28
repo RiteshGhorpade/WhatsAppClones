@@ -9,6 +9,18 @@ function SidebarChat(props) {
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
+  const [messages, setMessages] = useState("");
+  useEffect(() => {
+    if (props.id) {
+      db.collection("rooms")
+        .doc(props.id)
+        .collection("messages")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) =>
+          setMessages(snapshot.docs.map((doc) => doc.data()))
+        );
+    }
+  }, []);
   const createChat = () => {
     const roomName = prompt("Please Enter The name for Chat room");
     if (roomName) {
@@ -23,7 +35,7 @@ function SidebarChat(props) {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="sidebarChat_info">
           <h4>{props.name}</h4>
-          <p>Last Message...</p>
+          <p>{messages[0]?.message}</p>
         </div>
       </div>
     </Link>
