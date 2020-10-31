@@ -20,7 +20,7 @@ function SidebarChat(props) {
           setMessages(snapshot.docs.map((doc) => doc.data()))
         );
     }
-  }, []);
+  }, [props.id]);
   const createChat = () => {
     const roomName = prompt("Please Enter The name for Chat room");
     if (roomName) {
